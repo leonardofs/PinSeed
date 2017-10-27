@@ -8,14 +8,11 @@ using System.Linq;
 
 namespace PinSeed.ViewModels
 {
-    public class MainPageViewModel : BaseViewModel
+    public class MyNavigationPageViewModel : BaseViewModel
     {
-       
-        public MainPageViewModel(INavigationService navigationService, IPageDialogService pageDialogService) :base(navigationService, pageDialogService)
+        public MyNavigationPageViewModel(INavigationService navigationService, IPageDialogService pageDialogService) : base(navigationService, pageDialogService)
         {
 
         }
-
-       
     }
 }

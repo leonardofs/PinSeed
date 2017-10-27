@@ -1173,44 +1173,44 @@ namespace PinSeed.Droid
 		public partial class Color
 		{
 			
-			// aapt resource value: 0x7f09004e
-			public const int abc_background_cache_hint_selector_material_dark = 2131296334;
-			
 			// aapt resource value: 0x7f09004f
-			public const int abc_background_cache_hint_selector_material_light = 2131296335;
+			public const int abc_background_cache_hint_selector_material_dark = 2131296335;
 			
 			// aapt resource value: 0x7f090050
-			public const int abc_btn_colored_borderless_text_material = 2131296336;
+			public const int abc_background_cache_hint_selector_material_light = 2131296336;
 			
 			// aapt resource value: 0x7f090051
-			public const int abc_btn_colored_text_material = 2131296337;
+			public const int abc_btn_colored_borderless_text_material = 2131296337;
 			
 			// aapt resource value: 0x7f090052
-			public const int abc_color_highlight_material = 2131296338;
+			public const int abc_btn_colored_text_material = 2131296338;
 			
 			// aapt resource value: 0x7f090053
-			public const int abc_hint_foreground_material_dark = 2131296339;
+			public const int abc_color_highlight_material = 2131296339;
 			
 			// aapt resource value: 0x7f090054
-			public const int abc_hint_foreground_material_light = 2131296340;
+			public const int abc_hint_foreground_material_dark = 2131296340;
+			
+			// aapt resource value: 0x7f090055
+			public const int abc_hint_foreground_material_light = 2131296341;
 			
 			// aapt resource value: 0x7f090005
 			public const int abc_input_method_navigation_guard = 2131296261;
 			
-			// aapt resource value: 0x7f090055
-			public const int abc_primary_text_disable_only_material_dark = 2131296341;
-			
 			// aapt resource value: 0x7f090056
-			public const int abc_primary_text_disable_only_material_light = 2131296342;
+			public const int abc_primary_text_disable_only_material_dark = 2131296342;
 			
 			// aapt resource value: 0x7f090057
-			public const int abc_primary_text_material_dark = 2131296343;
+			public const int abc_primary_text_disable_only_material_light = 2131296343;
 			
 			// aapt resource value: 0x7f090058
-			public const int abc_primary_text_material_light = 2131296344;
+			public const int abc_primary_text_material_dark = 2131296344;
 			
 			// aapt resource value: 0x7f090059
-			public const int abc_search_url_text = 2131296345;
+			public const int abc_primary_text_material_light = 2131296345;
+			
+			// aapt resource value: 0x7f09005a
+			public const int abc_search_url_text = 2131296346;
 			
 			// aapt resource value: 0x7f090006
 			public const int abc_search_url_text_normal = 2131296262;
@@ -1221,32 +1221,32 @@ namespace PinSeed.Droid
 			// aapt resource value: 0x7f090008
 			public const int abc_search_url_text_selected = 2131296264;
 			
-			// aapt resource value: 0x7f09005a
-			public const int abc_secondary_text_material_dark = 2131296346;
-			
 			// aapt resource value: 0x7f09005b
-			public const int abc_secondary_text_material_light = 2131296347;
+			public const int abc_secondary_text_material_dark = 2131296347;
 			
 			// aapt resource value: 0x7f09005c
-			public const int abc_tint_btn_checkable = 2131296348;
+			public const int abc_secondary_text_material_light = 2131296348;
 			
 			// aapt resource value: 0x7f09005d
-			public const int abc_tint_default = 2131296349;
+			public const int abc_tint_btn_checkable = 2131296349;
 			
 			// aapt resource value: 0x7f09005e
-			public const int abc_tint_edittext = 2131296350;
+			public const int abc_tint_default = 2131296350;
 			
 			// aapt resource value: 0x7f09005f
-			public const int abc_tint_seek_thumb = 2131296351;
+			public const int abc_tint_edittext = 2131296351;
 			
 			// aapt resource value: 0x7f090060
-			public const int abc_tint_spinner = 2131296352;
+			public const int abc_tint_seek_thumb = 2131296352;
 			
 			// aapt resource value: 0x7f090061
-			public const int abc_tint_switch_thumb = 2131296353;
+			public const int abc_tint_spinner = 2131296353;
 			
 			// aapt resource value: 0x7f090062
-			public const int abc_tint_switch_track = 2131296354;
+			public const int abc_tint_switch_thumb = 2131296354;
+			
+			// aapt resource value: 0x7f090063
+			public const int abc_tint_switch_track = 2131296355;
 			
 			// aapt resource value: 0x7f09004c
 			public const int accent = 2131296332;
@@ -1305,11 +1305,14 @@ namespace PinSeed.Droid
 			// aapt resource value: 0x7f090003
 			public const int cardview_shadow_start_color = 2131296259;
 			
+			// aapt resource value: 0x7f09004e
+			public const int darkgreen = 2131296334;
+			
 			// aapt resource value: 0x7f09003f
 			public const int design_bottom_navigation_shadow_color = 2131296319;
 			
-			// aapt resource value: 0x7f090063
-			public const int design_error = 2131296355;
+			// aapt resource value: 0x7f090064
+			public const int design_error = 2131296356;
 			
 			// aapt resource value: 0x7f090040
 			public const int design_fab_shadow_end_color = 2131296320;
@@ -1341,8 +1344,8 @@ namespace PinSeed.Droid
 			// aapt resource value: 0x7f090049
 			public const int design_textinput_error_color_light = 2131296329;
 			
-			// aapt resource value: 0x7f090064
-			public const int design_tint_password_toggle = 2131296356;
+			// aapt resource value: 0x7f090065
+			public const int design_tint_password_toggle = 2131296357;
 			
 			// aapt resource value: 0x7f090017
 			public const int dim_foreground_disabled_material_dark = 2131296279;
@@ -1467,11 +1470,11 @@ namespace PinSeed.Droid
 			// aapt resource value: 0x7f09003c
 			public const int switch_thumb_disabled_material_light = 2131296316;
 			
-			// aapt resource value: 0x7f090065
-			public const int switch_thumb_material_dark = 2131296357;
-			
 			// aapt resource value: 0x7f090066
-			public const int switch_thumb_material_light = 2131296358;
+			public const int switch_thumb_material_dark = 2131296358;
+			
+			// aapt resource value: 0x7f090067
+			public const int switch_thumb_material_light = 2131296359;
 			
 			// aapt resource value: 0x7f09003d
 			public const int switch_thumb_normal_material_dark = 2131296317;
@@ -2204,26 +2207,26 @@ namespace PinSeed.Droid
 			// aapt resource value: 0x7f020053
 			public const int avd_hide_password = 2130837587;
 			
-			// aapt resource value: 0x7f02010e
-			public const int avd_hide_password_1 = 2130837774;
-			
-			// aapt resource value: 0x7f02010f
-			public const int avd_hide_password_2 = 2130837775;
-			
 			// aapt resource value: 0x7f020110
-			public const int avd_hide_password_3 = 2130837776;
+			public const int avd_hide_password_1 = 2130837776;
+			
+			// aapt resource value: 0x7f020111
+			public const int avd_hide_password_2 = 2130837777;
+			
+			// aapt resource value: 0x7f020112
+			public const int avd_hide_password_3 = 2130837778;
 			
 			// aapt resource value: 0x7f020054
 			public const int avd_show_password = 2130837588;
 			
-			// aapt resource value: 0x7f020111
-			public const int avd_show_password_1 = 2130837777;
-			
-			// aapt resource value: 0x7f020112
-			public const int avd_show_password_2 = 2130837778;
-			
 			// aapt resource value: 0x7f020113
-			public const int avd_show_password_3 = 2130837779;
+			public const int avd_show_password_1 = 2130837779;
+			
+			// aapt resource value: 0x7f020114
+			public const int avd_show_password_2 = 2130837780;
+			
+			// aapt resource value: 0x7f020115
+			public const int avd_show_password_3 = 2130837781;
 			
 			// aapt resource value: 0x7f020055
 			public const int design_bottom_navigation_item_background = 2130837589;
@@ -2768,17 +2771,23 @@ namespace PinSeed.Droid
 			// aapt resource value: 0x7f020109
 			public const int notification_icon_background = 2130837769;
 			
-			// aapt resource value: 0x7f02010c
-			public const int notification_template_icon_bg = 2130837772;
+			// aapt resource value: 0x7f02010e
+			public const int notification_template_icon_bg = 2130837774;
 			
-			// aapt resource value: 0x7f02010d
-			public const int notification_template_icon_low_bg = 2130837773;
+			// aapt resource value: 0x7f02010f
+			public const int notification_template_icon_low_bg = 2130837775;
 			
 			// aapt resource value: 0x7f02010a
 			public const int notification_tile_bg = 2130837770;
 			
 			// aapt resource value: 0x7f02010b
 			public const int notify_panel_notification_icon_bg = 2130837771;
+			
+			// aapt resource value: 0x7f02010c
+			public const int splash = 2130837772;
+			
+			// aapt resource value: 0x7f02010d
+			public const int telainicial = 2130837773;
 			
 			static Drawable()
 			{
@@ -5020,6 +5029,9 @@ namespace PinSeed.Droid
 			
 			// aapt resource value: 0x7f08000e
 			public const int Widget_MediaRouter_MediaRouteButton = 2131230734;
+			
+			// aapt resource value: 0x7f08018b
+			public const int splashscreen = 2131231115;
 			
 			static Style()
 			{

@@ -39,5 +39,19 @@ namespace PinSeed.ViewModels
             _navigationService = navigationService;
             _pageDialogService = pageDialogService;
         }
+
+        public virtual void OnNavigatedFrom(NavigationParameters parameters)
+        {
+        }
+
+        public virtual void OnNavigatedTo(NavigationParameters parameters)
+        {
+        }
+
+        public virtual void OnNavigatingTo(NavigationParameters parameters)
+        {
+        }
+
+
     }
 }

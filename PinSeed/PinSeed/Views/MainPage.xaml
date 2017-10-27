@@ -5,7 +5,7 @@
              xmlns:local="clr-namespace:PinSeed.Views"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="PinSeed.Views.MainPage"
-             BarBackgroundColor="Black"
+             BarBackgroundColor="#6b974b"
              Title="MainPage">
     
         

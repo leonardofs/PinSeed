@@ -1,6 +1,8 @@
 ﻿using Prism.Unity;
 using PinSeed.Views;
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+
 
 namespace PinSeed
 {
@@ -11,8 +13,9 @@ namespace PinSeed
         protected override void OnInitialized()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
 
-            NavigationService.NavigateAsync("MainPage");
+            NavigationService.NavigateAsync("NavigationPage/MainPage");
         }
 
         protected override void RegisterTypes()
@@ -22,6 +25,9 @@ namespace PinSeed
             Container.RegisterTypeForNavigation<TakePicturePage>();
             Container.RegisterTypeForNavigation<MapPage>();
             Container.RegisterTypeForNavigation<LastRegistersPage>();
+            Container.RegisterTypeForNavigation<FormPage>();
+            Container.RegisterTypeForNavigation<MyNavigationPage>();
         }
+        
     }
 }

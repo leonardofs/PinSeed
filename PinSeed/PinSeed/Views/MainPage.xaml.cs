@@ -1,21 +1,21 @@
 ﻿using Plugin.Media;
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace PinSeed.Views
 {
+    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MainPage : TabbedPage
     {
         public MainPage()
         {
-           // InitMedia();
-           
+            
+            NavigationPage.SetHasNavigationBar(this, false);
+
             InitializeComponent();
 
         }
       
-       // private async void InitMedia()
-       // {
-        //    await CrossMedia.Current.Initialize();
-        //}
+      
     }
 }

@@ -12,8 +12,14 @@
     <StackLayout>
         
         <StackLayout Orientation="Horizontal"  VerticalOptions="End">
-            <Button x:Name="takePhoto" Text="Tirar foto" Command="{Binding TakePictureCommand }" BackgroundColor="Pink"  BorderColor="Transparent"/>
-            <Button x:Name="pickPhoto" Text="selecionar foto" Command= "{Binding SelectPictureCommand}" BackgroundColor="Pink"  BorderColor="Transparent"/>
+
+            <ActivityIndicator x:Name="actInd"
+                             IsRunning="{Binding IsLoading}"
+                             IsVisible="{Binding IsLoading}" Color="Red"/>
+
+
+            <Button x:Name="takePhoto" Text="Tirar foto" IsEnabled="{Binding EnableButtons}" Command="{Binding TakePictureCommand }" BackgroundColor="Pink"  BorderColor="Transparent"/>
+            <Button x:Name="pickPhoto" Text="selecionar foto" IsEnabled="{Binding EnableButtons}" Command= "{Binding SelectPictureCommand}" BackgroundColor="Pink"  BorderColor="Transparent"/>
         </StackLayout>
     </StackLayout>
 </ContentPage>
