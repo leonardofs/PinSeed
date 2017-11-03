@@ -59,7 +59,6 @@ namespace PinSeed.ViewModels
         private async Task ExecuteTakePictureCommand()
         {
 
-
             if (!CrossMedia.Current.IsCameraAvailable || !CrossMedia.Current.IsTakePhotoSupported)
             {
 
@@ -68,8 +67,6 @@ namespace PinSeed.ViewModels
             }
             else
             {
-
-
 
                 try
                 {
@@ -97,8 +94,8 @@ namespace PinSeed.ViewModels
                 }
             }
         }
-
-
+ 
+    
         private void WhenLoading()
         {
             EnableButtons = false;
@@ -110,7 +107,6 @@ namespace PinSeed.ViewModels
             EnableButtons = true;
             IsLoading = false;
         }
-
 
         //Selecionar foto da galeria
         private async Task ExecuteSelectPictureCommand()
@@ -171,11 +167,9 @@ namespace PinSeed.ViewModels
                 try
                 {
 
-                    ImageSource imageSource = ImageSource.FromStream(() => new MemoryStream(imageAsBytes));
-
                     _navigationParams = new NavigationParameters
                     {
-                        { "ImagemSource", imageSource }
+                        { "ImageAsBytes", imageAsBytes }
                     };
 
                     await _navigationService.NavigateAsync("FormPage", _navigationParams, false);
