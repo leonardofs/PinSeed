@@ -13,8 +13,8 @@ namespace PinSeed.ViewModels
     public class FormPageViewModel : BaseViewModel, INavigatedAware
     {
 
-        private ImageSource imagem;
-        public ImageSource Imagem
+        private byte[] imagem;
+        public byte[] Imagem
         {
             get { return imagem; }
             set { SetProperty(ref imagem, value); }
@@ -34,8 +34,8 @@ namespace PinSeed.ViewModels
 
         public override void OnNavigatedTo(NavigationParameters navigationParams)
         {
+            imagem = navigationParams.GetValue<byte[]>("ImageAsBytes");
             
-            imagem = (ImageSource)navigationParams["ImageSource"];
              _navigationParams = navigationParams;
 
             if (navigationParams.GetNavigationMode() == 0)

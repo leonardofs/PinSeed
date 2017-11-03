@@ -50,11 +50,10 @@ namespace PinSeed.ViewModels
         {
             CrossMedia.Current.Initialize();
             TakePictureCommand = new DelegateCommand(async () => await ExecuteTakePictureCommand());
-            SelectPictureCommand = new DelegateCommand(async () => await ExecuteSelectPictureCommand());
+            
             NoLoading();
         }
-
-        // Usar camera para tirar foto
+        
 
         private async Task ExecuteTakePictureCommand()
         {
@@ -72,6 +71,9 @@ namespace PinSeed.ViewModels
                 {
 
                     WhenLoading();
+
+                    /////////////////////////////////////////// Navegação
+
                     var file = await CrossMedia.Current.TakePhotoAsync(new StoreCameraMediaOptions
                     {
                         PhotoSize = PhotoSize.Medium,
@@ -84,8 +86,44 @@ namespace PinSeed.ViewModels
                         return;
                     }
 
-                    await Navigate(file);
-                    NoLoading();
+                    byte[] imageAsBytes = null;
+                    using (var memoryStream = new MemoryStream())
+                    {
+                        file.GetStream().CopyTo(memoryStream);
+                        file.Dispose();
+                        imageAsBytes = memoryStream.ToArray();
+                    }
+                    if (imageAsBytes.Length > 0)
+                    {
+                        try
+                        {
+                            _navigationParams = new NavigationParameters
+                            {
+                                { "ImageAsBytes", imageAsBytes }
+                            };
+
+                            await _navigationService.NavigateAsync("FormPage", _navigationParams, false);
+                            NoLoading();
+                            return;
+                        }
+                        catch (Exception e)
+                        {
+                            Debug.WriteLine(e);
+                            NoLoading();
+                            await _pageDialogService.DisplayAlertAsync("Erro navega", e.ToString(), "OK");
+                            throw;
+                            
+                        }
+                    }
+                    else
+                    {
+                        await _pageDialogService.DisplayAlertAsync("Erro", "imagem Vazia", "OK");
+                        NoLoading();
+                        return;
+
+                    }
+                    ////////////////////////////////////////////////////////////////Fim da Navegação
+                  
 
                 }
                 catch (Exception e)
@@ -109,44 +147,7 @@ namespace PinSeed.ViewModels
         }
 
         //Selecionar foto da galeria
-        private async Task ExecuteSelectPictureCommand()
-        {
-            var cameraStatus = await CrossPermissions.Current.CheckPermissionStatusAsync(Permission.Camera);
-            var storageStatus = await CrossPermissions.Current.CheckPermissionStatusAsync(Permission.Storage);
-
-            if (cameraStatus != PermissionStatus.Granted || storageStatus != PermissionStatus.Granted)
-            {
-                var results = await CrossPermissions.Current.RequestPermissionsAsync(new[] { Permission.Camera, Permission.Storage });
-                cameraStatus = results[Permission.Camera];
-                storageStatus = results[Permission.Storage];
-            }
-
-
-            if (!(cameraStatus == PermissionStatus.Granted && storageStatus == PermissionStatus.Granted))
-            {
-                await _pageDialogService.DisplayAlertAsync("Sem permissão", "Sem acesso a galeria de fotos", "OK");
-                return;
-            }
-
-            WhenLoading();
-            await CrossMedia.Current.Initialize();
-            var file = await CrossMedia.Current.PickPhotoAsync(new PickMediaOptions
-            {
-                PhotoSize = PhotoSize.Medium
-            });
-
-
-            if (file == null)
-            {
-                return;
-            }
-            else
-            {
-                //chama navegação passando o arquivo obtido
-                await Navigate(file);
-                NoLoading();
-            }
-        }
+       
 
 
         /// <summary>
@@ -167,10 +168,7 @@ namespace PinSeed.ViewModels
                 try
                 {
 
-                    _navigationParams = new NavigationParameters
-                    {
-                        { "ImageAsBytes", imageAsBytes }
-                    };
+                    _navigationParams.Add("ImageAsBytes", imageAsBytes); 
 
                     await _navigationService.NavigateAsync("FormPage", _navigationParams, false);
                     return;

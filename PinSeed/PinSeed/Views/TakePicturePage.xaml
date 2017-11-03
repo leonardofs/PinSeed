@@ -9,31 +9,43 @@
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness" iOS="0,0,0,0" Android="0,0,0,0" />
     </ContentPage.Padding>
-    
-   
-        
-        <StackLayout Orientation="Horizontal"  VerticalOptions="End">
 
+
+
+    <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+
+        <StackLayout Orientation="Horizontal" VerticalOptions="Start">
+            <!-- top controls -->
+
+        </StackLayout>
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <!-- middle controls -->
             <ActivityIndicator x:Name="actInd"
                              IsRunning="{Binding IsLoading}"
                              IsVisible="{Binding IsLoading}" Color="Red"/>
+            
+        </StackLayout>
 
 
-            <StackLayout Orientation="Vertical" VerticalOptions="EndAndExpand" HorizontalOptions="Center">
-                <fab:FloatingActionButtonView
+
+        <StackLayout Orientation="Horizontal" VerticalOptions="End">
+            <!--Botton controls-->
+
+            <fab:FloatingActionButtonView
 				ImageName="photoFAB.png"
 				ColorNormal="Green"
-				ColorPressed="Green"
-				ColorRipple="Green"
+				ColorPressed="GreenYellow"
+				ColorRipple="LightGray"
 				x:Name="TakePhoto"
 				IsVisible="true"
-				HorizontalOptions="Center"
+				HorizontalOptions="CenterAndExpand"
                 IsEnabled="{Binding EnableButtons}" 
                 Command="{Binding TakePictureCommand }"/>
-            </StackLayout>
 
-        
-           
         </StackLayout>
+
+
+
+    </StackLayout>
    
 </ContentPage>

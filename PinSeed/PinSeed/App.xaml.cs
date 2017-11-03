@@ -13,9 +13,9 @@ namespace PinSeed
         protected override void OnInitialized()
         {
             InitializeComponent();
-            NavigationPage.SetHasNavigationBar(this, false);
+            MyNavigationPage.SetHasNavigationBar(this, false);
 
-            NavigationService.NavigateAsync("NavigationPage/MainPage");
+            NavigationService.NavigateAsync("MyNavigationPage/MainPage");
         }
 
         protected override void RegisterTypes()
