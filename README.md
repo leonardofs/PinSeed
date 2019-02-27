@@ -1,1 +1,3 @@
-Projeto não foi finalidado
+AVISO:
+
+O projeto não foi finalidado
